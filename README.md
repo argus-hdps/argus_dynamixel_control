@@ -9,8 +9,6 @@ The project was reverse-engineered against one connected DYNAMIXEL XL431-T250-T 
 | Setting | Value |
 | --- | --- |
 | Camera | SBIG AC461M, serial AC461M-007313-13 |
-| Camera bridge IP | 10.0.144.35 |
-| Argus fiber host IP | 10.0.144.2 |
 | UDP port | 6464 |
 | Protocol | DYNAMIXEL Protocol 2.0 |
 | Servo model | XL431-T250-T, model number 1061 |
