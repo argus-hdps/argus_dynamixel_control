@@ -2,7 +2,12 @@
 """Cycle one XL431 through centered angles, independently of the MIDI demo."""
 
 import argparse
+from pathlib import Path
+import sys
 import time
+
+# Allow running this example directly from a source checkout without installing.
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 
 from camera_dynamixel import CameraBridge, ServoError
 

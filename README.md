@@ -64,9 +64,14 @@ This standalone demo is separate from the MIDI experiment. It cycles through:
 
     0 -> 90 -> 180 -> -90 -> -180 -> 0 degrees
 
-Run two cycles by default:
+Run two cycles by default from the repository root:
 
     python3 examples/angle_cycle.py
+
+The example also works directly from its own directory:
+
+    cd examples
+    python3 angle_cycle.py
 
 Choose an ID and cycle count:
 
