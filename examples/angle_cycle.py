@@ -60,7 +60,8 @@ def run(args: argparse.Namespace) -> None:
                     f"-> goal {target}, present {servo.position}",
                     flush=True,
                 )
-                time.sleep(args.dwell)
+                if args.dwell:
+                    time.sleep(args.dwell)
     finally:
         try:
             servo.move_to_angle(0, timeout=args.move_timeout, tolerance=args.tolerance)
@@ -77,7 +78,7 @@ def main() -> None:
     parser.add_argument("--camera-ip", default="10.0.144.35")
     parser.add_argument("--host-ip", default="10.0.144.2")
     parser.add_argument("--cycles", type=int, default=2)
-    parser.add_argument("--dwell", type=float, default=0.35, help="pause after each angle, seconds")
+    parser.add_argument("--dwell", type=float, default=0.0, help="pause after each angle, seconds (default: no extra pause)")
     parser.add_argument("--move-timeout", type=float, default=30.0)
     parser.add_argument("--tolerance", type=int, default=32)
     parser.add_argument("--start-tolerance", type=int, default=256)

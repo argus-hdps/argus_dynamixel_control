@@ -68,6 +68,8 @@ Run two cycles by default from the repository root:
 
     python3 examples/angle_cycle.py
 
+The demo waits for each commanded position, but adds no extra pause between positions by default. Use `--dwell 0.5` to add a half-second pause. The observed profile-velocity and profile-acceleration registers are both 0, so this demo does not rewrite the servo speed settings.
+
 The example also works directly from its own directory:
 
     cd examples
@@ -75,7 +77,7 @@ The example also works directly from its own directory:
 
 Choose an ID and cycle count:
 
-    python3 examples/angle_cycle.py --id 102 --cycles 3 --dwell 0.5 --retries 10 --timeout 0.45
+    python3 examples/angle_cycle.py --id 102 --cycles 3 --retries 10 --timeout 0.45
 
 The angle convention is centered on the servo's reported range: -180 degrees maps to the minimum position, 0 degrees maps to the midpoint, and +180 degrees maps to the maximum. For model 1061 with limits 0..16383, the targets are approximately 0, 4096, 8192, 12288, and 16383 counts. This is an encoder-range mapping for a free-standing demonstration; it is not calibrated to telescope focus or a mechanical zero.
 

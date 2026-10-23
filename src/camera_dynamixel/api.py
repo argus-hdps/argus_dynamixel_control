@@ -345,7 +345,7 @@ class Servo:
                     return last_position
             except ServoTimeout:
                 pass
-            time.sleep(0.1)
+            time.sleep(0.05)
         raise ServoTimeout(
             f"Servo {self.id} did not reach {position}; last present position was {last_position}"
         )
